@@ -12,23 +12,19 @@
         }
 
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #0891b2;
-            --accent: #06b6d4;
-            --dark: #0f172a;
-            --dark-light: #1e293b;
-            --gray: #64748b;
-            --light: #f1f5f9;
+            --navy: #001f3f;
+            --navy-light: #003d7a;
             --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --red: #dc143c;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: #333;
+            background: var(--white);
         }
 
         .container {
@@ -38,13 +34,13 @@
         }
 
         header {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
+            background: var(--white);
             padding: 1rem 0;
+            border-bottom: 3px solid var(--navy);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -56,7 +52,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--white);
+            color: var(--navy);
             text-decoration: none;
         }
 
@@ -67,34 +63,45 @@
         }
 
         .nav-links a {
-            color: var(--light);
+            color: var(--navy);
             text-decoration: none;
             transition: color 0.3s ease;
             font-weight: 500;
         }
 
         .nav-links a:hover {
-            color: var(--accent);
+            color: var(--navy-light);
+            text-decoration: underline;
         }
 
         .hero {
-            padding: 6rem 0;
+            padding: 4rem 0;
             text-align: center;
-            color: var(--white);
+            background: var(--white);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--navy);
+            margin: 0 auto 2rem;
+            display: block;
+            object-fit: cover;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
             font-weight: 800;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
+            color: var(--gray);
             font-weight: 400;
-            opacity: 0.9;
         }
 
         .bio {
@@ -102,27 +109,47 @@
             margin: 0 auto 2rem;
             font-size: 1.1rem;
             line-height: 1.8;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
             padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--white);
+            border: 2px solid var(--navy);
+            border-radius: 8px;
         }
 
         .looking-for {
-            background: rgba(37, 99, 235, 0.9);
-            backdrop-filter: blur(10px);
+            background: var(--white);
+            border: 3px solid var(--navy);
             padding: 1.5rem 2rem;
-            border-radius: 12px;
+            border-radius: 8px;
             max-width: 900px;
             margin: 2rem auto;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
         .looking-for p {
             font-size: 1.1rem;
             font-weight: 500;
+            color: var(--navy);
+        }
+
+        .arxiv-endorsement {
+            background: var(--light-gray);
+            border: 2px solid var(--red);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .arxiv-endorsement p {
+            color: var(--red);
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .arxiv-endorsement a {
+            color: var(--red);
+            font-weight: 600;
+            text-decoration: underline;
         }
 
         .social-links {
@@ -138,68 +165,60 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--dark);
+            background: var(--white);
+            color: var(--navy);
             text-decoration: none;
+            border: 2px solid var(--navy);
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .social-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.2);
-        }
-
-        .social-btn.arxiv {
-            background: var(--secondary);
+            background: var(--navy);
             color: var(--white);
-        }
-
-        .social-btn.arxiv:hover {
-            background: #0e7490;
-        }
-
-        main {
-            background: var(--white);
-            min-height: 100vh;
         }
 
         section {
             padding: 4rem 0;
+            background: var(--white);
         }
 
         section h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             text-align: center;
-            color: var(--dark);
+            color: var(--navy);
             font-weight: 700;
+            border-bottom: 3px solid var(--navy);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            width: 100%;
         }
 
         .publications-grid {
             display: grid;
             gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .publication-card {
             background: var(--white);
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary);
+            border: 2px solid var(--navy);
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
 
         .publication-card:hover {
-            transform: translateX(8px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 31, 63, 0.15);
+            transform: translateY(-4px);
         }
 
         .publication-card h3 {
             font-size: 1.4rem;
-            color: var(--dark);
+            color: var(--navy);
             margin-bottom: 0.75rem;
             font-weight: 700;
         }
@@ -217,21 +236,22 @@
             border-radius: 6px;
             font-size: 0.875rem;
             font-weight: 600;
+            border: 2px solid var(--navy);
         }
 
         .badge-accepted {
-            background: #dcfce7;
-            color: #166534;
+            background: var(--white);
+            color: var(--navy);
         }
 
         .badge-venue {
-            background: #dbeafe;
-            color: #1e40af;
+            background: var(--navy);
+            color: var(--white);
         }
 
         .badge-year {
-            background: #f3e8ff;
-            color: #6b21a8;
+            background: var(--white);
+            color: var(--navy);
         }
 
         .publication-card p {
@@ -248,7 +268,7 @@
 
         .pub-link {
             padding: 0.5rem 1rem;
-            background: var(--primary);
+            background: var(--navy);
             color: var(--white);
             text-decoration: none;
             border-radius: 6px;
@@ -258,21 +278,35 @@
         }
 
         .pub-link:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
+            background: var(--navy-light);
         }
 
-        .pub-link.secondary {
-            background: var(--gray);
+        .view-all {
+            text-align: center;
+            margin-top: 3rem;
         }
 
-        .pub-link.secondary:hover {
-            background: #475569;
+        .view-all-btn {
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--navy);
+            text-decoration: none;
+            border: 3px solid var(--navy);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .view-all-btn:hover {
+            background: var(--navy);
+            color: var(--white);
         }
 
         #contact {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
-            color: var(--white);
+            background: var(--light-gray);
+            border-top: 3px solid var(--navy);
         }
 
         .contact-grid {
@@ -286,25 +320,25 @@
         .contact-item {
             text-align: center;
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--white);
+            border: 2px solid var(--navy);
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
 
         .contact-item:hover {
+            box-shadow: 0 8px 16px rgba(0, 31, 63, 0.15);
             transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.15);
         }
 
         .contact-item h3 {
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
+            color: var(--navy);
         }
 
         .contact-item a {
-            color: var(--accent);
+            color: var(--navy);
             text-decoration: none;
             font-weight: 500;
         }
@@ -314,24 +348,24 @@
         }
 
         footer {
-            background: var(--dark);
-            color: var(--light);
+            background: var(--navy);
+            color: var(--white);
             text-align: center;
             padding: 2rem 0;
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .nav-links {
                 gap: 1rem;
             }
 
-            .social-links {
-                flex-direction: column;
-                align-items: stretch;
+            .profile-image {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
@@ -339,10 +373,10 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">Maryam Fatima</a>
+            <a href="index.html" class="logo">Maryam Fatima</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#publications">Publications</a></li>
+                <li><a href="publications.html">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -350,6 +384,8 @@
 
     <section class="hero" id="about">
         <div class="container">
+            <img src="images/2.png" alt="Maryam Fatima" class="profile-image">
+            
             <h1>Maryam Fatima</h1>
             <h2>AI Researcher | First-Author Publications</h2>
             
@@ -361,110 +397,108 @@
                 <p><strong>🔍 Currently Seeking:</strong> Collaboration opportunities in LLM Infrastructure and Multi-Agent Systems | Research Scientist positions</p>
             </div>
 
+            <div class="arxiv-endorsement">
+                <p>Maryam Fatima requests your endorsement to submit an article to the cs.LG section of arXiv. To tell us that you would (or would not) like to endorse this person, please visit the following URL: <a href="https://arxiv.org/auth/endorse?x=J8E76Z" target="_blank">https://arxiv.org/auth/endorse?x=J8E76Z</a></p>
+            </div>
+
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/maryam-fatima" class="social-btn" target="_blank">
-                    LinkedIn
-                </a>
-                <a href="https://github.com/smfatima3" class="social-btn" target="_blank">
-                    GitHub
-                </a>
-                <a href="mailto:s.m.fatima13@gmail.com" class="social-btn arxiv" target="_blank">
-                    Request arXiv Endorsement
-                </a>
+                <a href="https://www.linkedin.com/in/maryam-fatima" class="social-btn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/smfatima3" class="social-btn" target="_blank">GitHub</a>
             </div>
         </div>
     </section>
 
-    <main>
-        <section id="publications">
-            <div class="container">
-                <h2>Selected Publications</h2>
-                <div class="publications-grid">
-                    
-                    <div class="publication-card">
-                        <h3>A Proactive Reliability Metric for Detecting Failures in Large Language Model Training</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-accepted">✓ Accepted</span>
-                            <span class="badge badge-venue">EMNLP 2025 Industry Track</span>
-                            <span class="badge badge-year">2025</span>
-                        </div>
-                        <p>Introduces the R-Metric, a proactive reliability metric combining hardware monitoring, training dynamics, and model performance signals to predict LLM training failures before they occur, achieving 0.973 F1-Score with 12.8 minute lead time.</p>
-                        <div class="publication-links">
-                            <a href="#" class="pub-link">Paper</a>
-                            <a href="https://github.com/smfatima3" class="pub-link secondary">Code</a>
-                        </div>
+    <section id="publications">
+        <div class="container">
+            <h2>Selected Publications</h2>
+            <div class="publications-grid">
+                
+                <div class="publication-card">
+                    <h3>A Proactive Reliability Metric for Detecting Failures in Large Language Model Training</h3>
+                    <div class="publication-meta">
+                        <span class="badge badge-accepted">✓ Accepted</span>
+                        <span class="badge badge-venue">EMNLP 2024 Industry Track</span>
+                        <span class="badge badge-year">2024</span>
                     </div>
-
-                    <div class="publication-card">
-                        <h3>FIRMA: Bidirectional Formal-Informal Mathematical Language Alignment with Proof-Theoretic Grounding</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-accepted">✓ Accepted</span>
-                            <span class="badge badge-venue">EMNLP 2025 Workshop</span>
-                            <span class="badge badge-year">2025</span>
-                        </div>
-                        <p>A bidirectional translation system between formal and informal mathematical language leveraging proof-theoretic hierarchies, achieving 277.8% improvement over baselines through complexity-aware routing and proof-preserving attention mechanisms.</p>
-                        <div class="publication-links">
-                            <a href="#" class="pub-link">Paper</a>
-                            <a href="https://github.com/smfatima3/FIRMA" class="pub-link secondary">Code</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-card">
-                        <h3>PrivacyMAS: Navigating the Privacy-Utility-Coordination Trilemma in Multi-Agent Systems</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-accepted">✓ Accepted</span>
-                            <span class="badge badge-venue">NeurIPS 2025 Workshop (SEA)</span>
-                            <span class="badge badge-year">2025</span>
-                        </div>
-                        <p>Novel framework addressing the fundamental trilemma between privacy, utility, and coordination in multi-agent systems through adaptive differential privacy (ADAPT), achieving 98.3% coordination success and 19.6% utility improvement.</p>
-                        <div class="publication-links">
-                            <a href="#" class="pub-link">Paper</a>
-                            <a href="https://github.com/anonymous-github99/Trilemma" class="pub-link secondary">Code</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-card">
-                        <h3>LLM-Enhanced Contextual Music Triggering with Explainable AI</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-accepted">✓ Accepted</span>
-                            <span class="badge badge-venue">ISMIR 2025</span>
-                            <span class="badge badge-year">2025</span>
-                        </div>
-                        <p>Integrates Large Language Models with real-time speech processing for contextual music triggering through natural conversation, achieving 71% emotion detection confidence with explainable AI components using LIME-based techniques.</p>
-                        <div class="publication-links">
-                            <a href="#" class="pub-link">Paper</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <a href="mailto:s.m.fatima13@gmail.com">s.m.fatima13@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/smfatima3" target="_blank">@smfatima3</a>
-                    </div>
-                    <div class="contact-item">
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/maryam-fatima" target="_blank">Connect</a>
+                    <p>Introduces the R-Metric, a proactive reliability metric combining hardware monitoring, training dynamics, and model performance signals to predict LLM training failures before they occur, achieving 0.973 F1-Score with 12.8 minute lead time.</p>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link">Paper</a>
+                        <a href="https://github.com/smfatima3" class="pub-link">Code</a>
                     </div>
                 </div>
+
+                <div class="publication-card">
+                    <h3>FIRMA: Bidirectional Formal-Informal Mathematical Language Alignment with Proof-Theoretic Grounding</h3>
+                    <div class="publication-meta">
+                        <span class="badge badge-accepted">✓ Accepted</span>
+                        <span class="badge badge-venue">EMNLP 2024 Workshop</span>
+                        <span class="badge badge-year">2024</span>
+                    </div>
+                    <p>A bidirectional translation system between formal and informal mathematical language leveraging proof-theoretic hierarchies, achieving 277.8% improvement over baselines.</p>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link">Paper</a>
+                        <a href="https://github.com/smfatima3/FIRMA" class="pub-link">Code</a>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <h3>PrivacyMAS: Navigating the Privacy-Utility-Coordination Trilemma in Multi-Agent Systems</h3>
+                    <div class="publication-meta">
+                        <span class="badge badge-accepted">✓ Accepted</span>
+                        <span class="badge badge-venue">NeurIPS 2025 Workshop (SEA)</span>
+                        <span class="badge badge-year">2025</span>
+                    </div>
+                    <p>Novel framework achieving 98.3% coordination success and 19.6% utility improvement through adaptive differential privacy.</p>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link">Paper</a>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <h3>LLM-Enhanced Contextual Music Triggering with Explainable AI</h3>
+                    <div class="publication-meta">
+                        <span class="badge badge-accepted">✓ Accepted</span>
+                        <span class="badge badge-venue">ISMIR 2025</span>
+                        <span class="badge badge-year">2025</span>
+                    </div>
+                    <p>Integrates LLMs with real-time speech processing for contextual music triggering, achieving 71% emotion detection confidence.</p>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link">Paper</a>
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
+
+            <div class="view-all">
+                <a href="publications.html" class="view-all-btn">View All Publications →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:s.m.fatima13@gmail.com">s.m.fatima13@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/smfatima3" target="_blank">@smfatima3</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/maryam-fatima" target="_blank">Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Maryam Fatima. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; opacity: 0.7;">AI Researcher | LLM Infrastructure | Multi-Agent Systems</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">AI Researcher | LLM Infrastructure | Multi-Agent Systems</p>
         </div>
     </footer>
 </body>
